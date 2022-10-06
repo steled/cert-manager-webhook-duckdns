@@ -10,9 +10,7 @@ groupName: acme.duckdns.org
 
 logLevel: 2
 
-certManager:
-  namespace: cert-manager
-  serviceAccountName: cert-manager
+replicaCount: 1
 
 duckdns:
   token: ""
@@ -31,9 +29,12 @@ clusterIssuer:
 image:
   repository: joshuakraitberg/cert-manager-webhook-duckdns
   tag: v1.2.3
-  pullPolicy: IfNotPresent 
-  # pullSecret: ""
+  pullPolicy: IfNotPresent
 
+certManager:
+  serviceAccountName: cert-manager
+
+imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 

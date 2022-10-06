@@ -63,7 +63,6 @@ The following table lists the configurable parameters of the cert-manager-webhoo
 |------------------------------------|-------------------------------------------------|---------------------------------------------------------|
 | `groupName`                        | Group name for the webhook                      | `acme.duckdns.org`                                      |
 | `logLevel`                         | Logging level                                   | `2`                                                     |
-| `certManager.namespace`            | cert-manager namespace                          | `cert-manager`                                          |
 | `certManager.serviceAccountName`   | cert-manager service account name               | `cert-manager`                                          |
 | `duckdns.token`                    | DuckDNS token                                   | `""`                                                    |
 | `clusterIssuer.email`              | Cluster issuer email address                    | `name@example.com`                                      |

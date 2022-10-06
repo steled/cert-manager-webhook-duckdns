@@ -2,12 +2,9 @@ apiVersion: v1
 kind: Service
 metadata:
   name: {{ include "cert-manager-webhook-duckdns.fullname" . }}
-  namespace: {{ .Release.Namespace | quote }}
+  namespace: {{ .Release.Namespace }}
   labels:
-    app: {{ include "cert-manager-webhook-duckdns.name" . }}
-    chart: {{ include "cert-manager-webhook-duckdns.chart" . }}
-    release: {{ .Release.Name }}
-    heritage: {{ .Release.Service }}
+{{ include "cert-manager-webhook-duckdns.labels" . | indent 4 }}
 spec:
   type: {{ .Values.service.type }}
   ports:
@@ -16,5 +13,5 @@ spec:
       protocol: TCP
       name: https
   selector:
-    app: {{ include "cert-manager-webhook-duckdns.name" . }}
-    release: {{ .Release.Name }}
+    app.kubernetes.io/name: {{ include "cert-manager-webhook-duckdns.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}

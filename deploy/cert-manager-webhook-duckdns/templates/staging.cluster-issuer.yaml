@@ -3,11 +3,9 @@ apiVersion: cert-manager.io/v1
 kind: ClusterIssuer
 metadata:
   name: {{ include "cert-manager-webhook-duckdns.fullname" . }}-staging
+  namespace: {{ .Release.Namespace }}
   labels:
-    app: {{ include "cert-manager-webhook-duckdns.name" . }}
-    chart: {{ include "cert-manager-webhook-duckdns.chart" . }}
-    release: {{ .Release.Name }}
-    heritage: {{ .Release.Service }}
+{{ include "cert-manager-webhook-duckdns.labels" . | indent 4 }}
 spec:
   acme:
     email: {{ .Values.clusterIssuer.email }}
@@ -20,8 +18,8 @@ spec:
         webhook:
           config:
             apiTokenSecretRef:
-              key: token
               name: {{ include "cert-manager-webhook-duckdns.secretName" . }}
+              key: token
           groupName: {{ .Values.groupName }}
           solverName: duckdns
 {{- end -}}

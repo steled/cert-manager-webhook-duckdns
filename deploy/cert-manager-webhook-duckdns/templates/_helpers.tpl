@@ -31,6 +31,22 @@ Create chart name and version as used by the chart label.
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
 
+{{/*
+Common labels
+*/}}
+{{- define "cert-manager-webhook-duckdns.labels" -}}
+app.kubernetes.io/name: {{ include "cert-manager-webhook-duckdns.name" . }}
+helm.sh/chart: {{ include "cert-manager-webhook-duckdns.chart" . }}
+app.kubernetes.io/instance: {{ .Release.Name }}
+{{- if .Chart.AppVersion }}
+app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
+{{- end }}
+app.kubernetes.io/managed-by: {{ .Release.Service }}
+{{- end -}}
+
+{{/*
+PKI
+*/}}
 {{- define "cert-manager-webhook-duckdns.selfSignedIssuer" -}}
 {{ printf "%s-selfsign" (include "cert-manager-webhook-duckdns.fullname" .) }}
 {{- end -}}
