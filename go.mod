@@ -1,4 +1,4 @@
-module github.com/ebrianne/cert-manager-webhook-duckdns
+module github.com/joshuakraitberg/cert-manager-webhook-duckdns
 
 go 1.15
 

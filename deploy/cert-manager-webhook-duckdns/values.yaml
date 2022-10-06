@@ -29,7 +29,7 @@ clusterIssuer:
     create: false
     
 image:
-  repository: ebrianne/cert-manager-webhook-duckdns
+  repository: joshuakraitberg/cert-manager-webhook-duckdns
   tag: v1.2.3
   pullPolicy: IfNotPresent 
   # pullSecret: ""

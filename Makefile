@@ -1,4 +1,4 @@
-IMAGE_NAME := "ebrianne/cert-manager-webhook-duckdns"
+IMAGE_NAME := "joshuakraitberg/cert-manager-webhook-duckdns"
 IMAGE_TAG := "latest"
 
 OUT := $(shell pwd)/_out
