@@ -17,4 +17,4 @@ rendered-manifest.yaml:
 	    --name cert-manager-webhook-duckdns \
         --set image.repository=$(IMAGE_NAME) \
         --set image.tag=$(IMAGE_TAG) \
-        deploy/cert-manager-webhook-duckdns > "$(OUT)/rendered-manifest.yaml"
+        charts/cert-manager-webhook-duckdns > "$(OUT)/rendered-manifest.yaml"

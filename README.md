@@ -64,7 +64,7 @@ This webhook has been tested with [cert-manager] v1.2.0 and Kubernetes v0.17.x o
             --set clusterIssuer.staging.create=true \
             --set clusterIssuer.email=<email> \
             --set logLevel=2 \
-            ./deploy/cert-manager-webhook-duckdns
+            ./charts/cert-manager-webhook-duckdns
 
     Or you can use the helm repo provided [here](https://github.com/joshuakraitberg/helm-charts)
 
