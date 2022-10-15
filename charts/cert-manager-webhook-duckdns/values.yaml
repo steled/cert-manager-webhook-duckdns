@@ -28,7 +28,7 @@ clusterIssuer:
 
 image:
   repository: joshuakraitberg/cert-manager-webhook-duckdns
-  tag: v1.3.0
+  tag: 1.4.0
   pullPolicy: IfNotPresent
 
 certManager:
