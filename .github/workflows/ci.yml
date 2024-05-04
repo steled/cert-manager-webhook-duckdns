@@ -67,7 +67,6 @@ jobs:
           push: true
           tags: |
             ${{ env.IMAGE_NAME }}:latest
-            ${{ env.IMAGE_NAME }}:${{ steps.version.outputs.tag }}
 
       - name: Configure Git
         run: |
