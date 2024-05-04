@@ -68,6 +68,11 @@ jobs:
           tags: |
             ${{ env.IMAGE_NAME }}:latest
 
+  helm-chart:
+    name: helm-chart
+    runs-on: ubuntu-latest
+
+    steps:
       - name: Configure Git
         run: |
           git config user.name "$GITHUB_ACTOR"
