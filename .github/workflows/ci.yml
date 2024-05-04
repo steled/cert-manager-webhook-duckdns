@@ -9,6 +9,9 @@ on:
     branches:
       - "*"
 
+env:
+  IMAGE_NAME: steled/cert-manager-webhook-duckdns
+
 jobs:
   changes:
     runs-on: ubuntu-latest
