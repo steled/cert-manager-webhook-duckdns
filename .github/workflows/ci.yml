@@ -9,6 +9,9 @@ on:
     branches:
       - "*"
 
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
 env:
   IMAGE_NAME: steled/cert-manager-webhook-duckdns
 
