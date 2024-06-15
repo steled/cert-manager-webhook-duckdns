@@ -37,4 +37,4 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64,linux/arm/v7,linux/arm64/v8
           push: true
-          tags: joshuakraitberg/cert-manager-webhook-duckdns:${{ steps.get_version.outputs.TAG_NAME }}
+          tags: steled/cert-manager-webhook-duckdns:${{ steps.get_version.outputs.TAG_NAME }}

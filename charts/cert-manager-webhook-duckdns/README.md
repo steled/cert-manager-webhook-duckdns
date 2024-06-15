@@ -5,7 +5,7 @@
 ## TL;DR
 
 ```console
-$ helm repo add joshuakraitberg.github.io https://joshuakraitberg.github.io/helm-charts
+$ helm repo add steled.github.io https://steled.github.io/helm-charts
 $ helm repo update
 $ helm install cert-manager-webhook-duckdns \
             --namespace cert-manager \
@@ -14,7 +14,7 @@ $ helm install cert-manager-webhook-duckdns \
             --set clusterIssuer.staging.create=true \
             --set clusterIssuer.email=<email> \
             --set logLevel=2 \
-            joshuakraitberg.github.io/cert-manager-webhook-duckdns
+            steled.github.io/cert-manager-webhook-duckdns
 ```
 
 ## Introduction
@@ -38,7 +38,7 @@ $ helm install cert-manager-webhook-duckdns \
             --set clusterIssuer.staging.create=true \
             --set clusterIssuer.email=<email> \
             --set logLevel=2 \
-            joshuakraitberg.github.io/cert-manager-webhook-duckdns
+            steled.github.io/cert-manager-webhook-duckdns
 ```
 
 The command deploys cert-manager-webhook-duckdns on the Kubernetes cluster in the default configuration. The [Parameters](#parameters) section lists the parameters that can be configured during installation.
@@ -68,7 +68,7 @@ The following table lists the configurable parameters of the cert-manager-webhoo
 | `clusterIssuer.email`              | Cluster issuer email address                    | `name@example.com`                                      |
 | `clusterIssuer.staging.create`     | Create letsencrypt staging cluster issuer       | `false`                                                 |
 | `clusterIssuer.production.create`  | Create letsencrypt production cluster issuer    | `false`                                                 |
-| `image.repository`                 | Docker image repository                         | `joshuakraitberg/cert-manager-webhook-duckdns`                 |
+| `image.repository`                 | Docker image repository                         | `steled/cert-manager-webhook-duckdns`                 |
 | `image.tag`                        | Docker image tag                                | `v1.2.2`                                                |
 | `image.pullPolicy`                 | Docker image pull policy                        | `IfNotPresent`                                          |
 | `image.pullSecret`                 | Docker image pull secret                        | `nil`                                                   |

@@ -27,7 +27,7 @@ clusterIssuer:
     create: false
 
 image:
-  repository: joshuakraitberg/cert-manager-webhook-duckdns
+  repository: steled/cert-manager-webhook-duckdns
   tag: 1.4.2
   pullPolicy: IfNotPresent
 
