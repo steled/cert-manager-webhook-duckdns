@@ -126,7 +126,7 @@ github.com/docopt/docopt-go v0.0.0-20180111231733-ee0de3bc6815/go.mod h1:WwZ+bS3
 github.com/dustin/go-humanize v0.0.0-20171111073723-bb3d318650d4/go.mod h1:HtrtbFcZ19U5GC7JDqmcUSB87Iq5E25KnS6fMYU6eOk=
 github.com/dustin/go-humanize v1.0.0 h1:VSnTsYCnlFHaM2/igO1h6X3HA71jcobQuxemgkq4zYo=
 github.com/dustin/go-humanize v1.0.0/go.mod h1:HtrtbFcZ19U5GC7JDqmcUSB87Iq5E25KnS6fMYU6eOk=
-github.com/ebrianne/cert-manager-webhook-duckdns v1.2.3 h1:1qLSuzzB0iVT2jsu8IC3AuZuI4h8pLXazbNVFSRkstU=
+github.com/steled/cert-manager-webhook-duckdns v1.2.3 h1:1qLSuzzB0iVT2jsu8IC3AuZuI4h8pLXazbNVFSRkstU=
 github.com/ebrianne/cert-manager-webhook-duckdns v1.2.3/go.mod h1:3/Gjgy7CCadDfMymGRiuU92Xb/ACAWcvbFg//GUZP54=
 github.com/ebrianne/duckdns-go v1.0.3 h1:4pynBn66NakE+6IpRK66DbzZU3pHzS/8/SvGsJ8aTRc=
 github.com/ebrianne/duckdns-go v1.0.3/go.mod h1:zOwPIqxL7RM09Uzb/zFnRD1TUf9qbe8cZL4YHuulu0E=

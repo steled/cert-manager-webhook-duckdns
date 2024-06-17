@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/ebrianne/cert-manager-webhook-duckdns/duckdns"
+	"github.com/steled/cert-manager-webhook-duckdns/duckdns"
 	"github.com/jetstack/cert-manager/test/acme/dns"
 )
 
