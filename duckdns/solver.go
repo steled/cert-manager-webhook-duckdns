@@ -17,7 +17,7 @@ import (
 	"k8s.io/client-go/rest"
 	"k8s.io/klog/v2"
 
-	duckdnsgo "github.com/steled/duckdns-go/duckdns"
+	duckdnsgo "github.com/ebrianne/duckdns-go/duckdns"
 )
 
 func NewSolver() webhook.Solver {
