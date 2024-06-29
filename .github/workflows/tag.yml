@@ -27,7 +27,7 @@ jobs:
 
       - name: Get the version
         id: get_version
-        run: echo ::set-output name=TAG_NAME::${GITHUB_REF/refs\/tags\//}
+        run: echo TAG_NAME::${GITHUB_REF/refs\/tags\//} >> $GITHUB_OUTPUT
 
       - name: Build and push docker image
         id: docker_build
