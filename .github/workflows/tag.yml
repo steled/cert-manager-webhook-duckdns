@@ -6,6 +6,9 @@ on:
     tags:
       - "*"
 
+env:
+  IMAGE_NAME: steled/cert-manager-webhook-duckdns
+
 jobs:
   build-docker:
     runs-on: ubuntu-latest
@@ -37,4 +40,6 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64,linux/arm/v7,linux/arm64/v8
           push: true
-          tags: steled/cert-manager-webhook-duckdns:${{ steps.get_version.outputs.TAG_NAME }}
+          tags: |
+            ${{ env.IMAGE_NAME }}:${{ steps.get_version.outputs.TAG_NAME }}
+            ${{ env.IMAGE_NAME }}:latest
