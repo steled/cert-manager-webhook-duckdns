@@ -1,9 +1,6 @@
 # ACME webhook for DuckDNS (cert-manager-webhook-duckdns)
 
-![Build/Push (master)](https://github.com/joshuakraitberg/cert-manager-webhook-duckdns/workflows/Build/Push%20(master)/badge.svg?branch=master)
-[![GoDoc](https://godoc.org/github.com/joshuakraitberg/cert-manager-webhook-duckdns?status.png)](https://godoc.org/github.com/joshuakraitberg/cert-manager-webhook-duckdns)
-[![GoReportCard](https://goreportcard.com/badge/github.com/joshuakraitberg/cert-manager-webhook-duckdns)](https://goreportcard.com/report/github.com/joshuakraitberg/cert-manager-webhook-duckdns)
-[![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/cert-manager-webhook-duckdns)](https://artifacthub.io/packages/search?repo=cert-manager-webhook-duckdns)
+![Build/Push (master)](https://github.com/steled/cert-manager-webhook-duckdns/actions/workflows/ci.yml/badge.svg?branch=master)
 
 `cert-manager-webhook-duckdns` is an ACME webhook for [cert-manager]. It provides an ACME (read: Let's Encrypt) webhook for [cert-manager], which allows to use a `DNS-01` challenge with [DuckDNS]. This allows to provide Let's Encrypt certificates to [Kubernetes] for service protocols other than HTTP and furthermore to request wildcard certificates. Internally it uses the [DuckDNS API] to communicate with DuckDNS.
 
@@ -18,7 +15,7 @@ Build the container image `cert-manager-webhook-duckdns:latest`:
 ## Image
 Ready made images are hosted on Docker Hub ([image tags]). Use at your own risk:
 
-    joshuakraitberg/cert-manager-webhook-duckdns
+    steled/cert-manager-webhook-duckdns
 ## Compatibility
 This webhook has been tested with [cert-manager] v1.2.0 and Kubernetes v0.17.x on `amd64`. In theory it should work on other hardware platforms as well but no steps have been taken to verify this. Please drop me a note if you had success.
 
@@ -66,7 +63,7 @@ This webhook has been tested with [cert-manager] v1.2.0 and Kubernetes v0.17.x o
             --set logLevel=2 \
             ./charts/cert-manager-webhook-duckdns
 
-    Or you can use the helm repo provided [here](https://github.com/joshuakraitberg/helm-charts)
+    Or you can use the helm repo provided [here](https://steled.github.io/cert-manager-webhook-duckdns/)
 
         helm install cert-manager-webhook-duckdns \
             --namespace cert-manager \
@@ -75,7 +72,7 @@ This webhook has been tested with [cert-manager] v1.2.0 and Kubernetes v0.17.x o
             --set clusterIssuer.staging.create=true \
             --set clusterIssuer.email=<email> \
             --set logLevel=2 \
-            joshuakraitberg.github.io/cert-manager-webhook-duckdns
+            steled.github.io/cert-manager-webhook-duckdns
 
     Check the logs
 
@@ -137,7 +134,7 @@ TEST_ZONE_NAME=example.com. DNS_NAME=example.com go test -v .
 [DuckDNS]: https://www.duckdns.org
 [DuckDNS API]: https://www.duckdns.org/spec.jsp
 [Helm]: https://helm.sh
-[image tags]: https://hub.docker.com/repository/docker/joshuakraitberg/cert-manager-webhook-duckdns
+[image tags]: https://hub.docker.com/repository/docker/steled/cert-manager-webhook-duckdns
 [Kubernetes]: https://kubernetes.io/
 [RBAC Authorization]: https://kubernetes.io/docs/reference/access-authn-authz/rbac/
 [setting-nameservers-for-dns01-self-check]: https://cert-manager.io/docs/configuration/acme/dns01/#setting-nameservers-for-dns01-self-check

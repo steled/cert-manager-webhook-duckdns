@@ -3,8 +3,8 @@ package main
 import (
 	"os"
 
-	"github.com/joshuakraitberg/cert-manager-webhook-duckdns/duckdns"
-	"github.com/jetstack/cert-manager/pkg/acme/webhook/cmd"
+	"github.com/steled/cert-manager-webhook-duckdns/duckdns"
+	"github.com/cert-manager/cert-manager/pkg/acme/webhook/cmd"
 	"k8s.io/klog/v2"
 )
 
