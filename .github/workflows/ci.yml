@@ -60,6 +60,10 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+      - name: Get the version
+        id: get_version
+        run: echo TAG_NAME=${GITHUB_REF/refs\/tags\//} >> $GITHUB_OUTPUT
+
       - name: Build and push docker image
         id: docker_build
         uses: docker/build-push-action@v6
@@ -70,6 +74,7 @@ jobs:
           push: true
           tags: |
             ${{ env.IMAGE_NAME }}:latest
+            ${{ env.IMAGE_NAME }}:${{ steps.get_version.outputs.TAG_NAME }}
 
   helm-chart:
     name: helm-chart
