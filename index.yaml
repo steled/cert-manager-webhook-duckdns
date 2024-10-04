@@ -2,6 +2,25 @@ apiVersion: v1
 entries:
   cert-manager-webhook-duckdns:
   - apiVersion: v1
+    appVersion: 1.4.7
+    created: "2024-10-04T17:38:22.3518441Z"
+    description: A Helm chart for cert manager webhook solver for ACME DNS01 challenge
+      via DuckDNS
+    digest: 338e47d60c29f9f2ce775e68820a659885159c165e29bf1ca0c7278adced56b6
+    home: https://github.com/steled/cert-manager-webhook-duckdns
+    icon: https://raw.githubusercontent.com/jetstack/cert-manager/master/logo/logo.png
+    keywords:
+    - cert-manager
+    - webhook
+    - letsencrypt
+    - tls
+    name: cert-manager-webhook-duckdns
+    sources:
+    - https://github.com/steled/cert-manager-webhook-duckdns
+    urls:
+    - https://github.com/steled/cert-manager-webhook-duckdns/releases/download/cert-manager-webhook-duckdns-1.4.7/cert-manager-webhook-duckdns-1.4.7.tgz
+    version: 1.4.7
+  - apiVersion: v1
     appVersion: 1.4.6
     created: "2024-10-04T04:09:11.002263176Z"
     description: A Helm chart for cert manager webhook solver for ACME DNS01 challenge
@@ -77,4 +96,4 @@ entries:
     urls:
     - https://github.com/steled/cert-manager-webhook-duckdns/releases/download/cert-manager-webhook-duckdns-1.4.2/cert-manager-webhook-duckdns-1.4.2.tgz
     version: 1.4.2
-generated: "2024-10-04T04:09:11.00228134Z"
+generated: "2024-10-04T17:38:22.351870018Z"
