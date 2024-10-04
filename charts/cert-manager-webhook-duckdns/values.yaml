@@ -28,7 +28,7 @@ clusterIssuer:
 
 image:
   repository: steled/cert-manager-webhook-duckdns
-  tag: 1.4.6
+  tag: 1.4.7
   pullPolicy: IfNotPresent
 
 certManager:
