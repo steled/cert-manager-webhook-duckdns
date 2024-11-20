@@ -3,7 +3,7 @@ module github.com/steled/cert-manager-webhook-duckdns
 go 1.22.4
 
 require (
-	github.com/cert-manager/cert-manager v1.15.1
+	github.com/cert-manager/cert-manager v1.15.4
 	github.com/ebrianne/duckdns-go v1.0.3
 	github.com/pkg/errors v0.9.1
 	k8s.io/apiextensions-apiserver v0.30.2
